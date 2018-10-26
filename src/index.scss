@@ -1,0 +1,346 @@
+@mixin elements(){
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  min-width: 100%;   
+  min-height: 100%;
+  margin-top: 45px; 
+  display: flex;
+  align-items: center;   
+  height: 30vw;
+}
+
+@mixin pictures(){
+ 
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  display:none;
+  cursor: pointer; 
+}
+
+@mixin name(){
+  color: rgb(92, 90, 90);
+  height: 100%;
+  text-shadow: -1px 0 black, 0 1px black,
+  1px 0 black, 0 -1px black;            
+  font-size: 90px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 35px;
+
+}
+
+$navColor: rgb(207, 199, 199);
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;    
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;    
+}
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^First^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.first_element{
+  background: url('./images/img3.png');
+  background-position: (20% 80%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  height: 50vw; 
+  @media all and (max-width: 420px){
+      display:flex;
+      flex-direction: row-reverse;
+  }
+
+  .droopdown_list_main{
+      position:absolute;
+      margin-top: 60px;
+    .droopdown{
+        display: none;
+        list-style: none;
+        li{
+            margin-right: 12px;
+            font-size: 18px;
+            padding: 5px;
+            &:hover{
+                background-color: rgb(250, 250, 250);                
+            }
+  
+          .droopdown_list{
+              text-decoration: none;
+              color: $navColor;
+              padding-top: 7px;     
+              &:hover{
+                color: black;
+              }   
+            }
+        }
+        
+    }
+  }
+  
+
+  @media all and (max-width: 420px){
+      .hamburger{                                         
+          display: block;
+          cursor: pointer;  
+      }          
+          
+      .bar1, .bar2, .bar3 {
+          width: 35px;
+          height: 5px;
+          background-color: white;
+          margin: 6px 0;
+          transition: 0.4s;
+      }
+      .droopdown{
+          display:block;
+          cursor: pointer;
+          height: 100px;
+              .droopdown_list{
+                  height: 20px; 
+                  text-decoration: none;
+                  height: 30px;
+                  text-transform: uppercase;
+                  color: white;
+                  list-style: none;                                                     
+              }
+      }  
+  }  
+  
+  
+  
+
+  .main{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;   
+      font-family: 'Montserrat', sans-serif;
+
+      @media all and (max-width: 420px){
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;                 
+      }     
+
+      .about {
+          color: $navColor;
+          padding: 15px;
+          font-size: 20px;
+          margin-right: 20px;
+          @media all and (max-width: 420px){
+              display: none;                 
+        }        
+      }        
+  }
+
+  .logo{
+      .logo_normal{
+          color: $navColor;
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          margin-left: 35px;        
+          height: 100%;
+          margin-top: 70px;
+          font-size: 60px;
+          @media all and (max-width: 420px){
+          font-size: 15px;
+          display: none;
+          }  
+      }
+  }
+
+  .logo_media{
+              @media all and (max-width: 420px){
+              display: block;  
+              color: $navColor;
+              font-size: 40px;
+              font-weight: 500;                 
+          }   
+      }       
+}
+
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^Second^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+// .main_recipe{
+//     overflow-y: scroll;
+//     scroll-behavior: smooth;
+// }
+
+.second_element{
+  background: url('./images/img5.jpg');
+  background-position: (20% 80%);
+ 
+
+  @include elements;
+  .breakfast{
+      @include pictures;                     
+      .nav{           
+         @include name;
+         @media all and (max-width: 420px){
+          font-size: 30px;
+          color: black;
+          font-weight: 400;                               
+          }             
+      }
+  }
+}
+
+.second_element:hover .breakfast{
+  display: block;
+}
+
+
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^third^^^^^^^^^^^^^^^^^^^^^^
+.third_element{
+  background: url('./images/img6.jpg');
+  background-position: (20% 80%);
+  @include elements;
+  .dinner{
+      @include pictures;       
+      .nav{
+          @include name; 
+          @media all and (max-width: 420px){
+              font-size: 30px;
+              color: black;
+              font-weight: 400;              
+          }                        
+      }
+  }
+}
+.third_element:hover .dinner{
+  display: block;
+ 
+}
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^fourth^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.fourth_element{
+  background: url('./images/img7.jpg');
+  background-position: center;
+  @include elements;
+  .supper{
+      @include pictures;     
+      .nav{
+          @include name;
+          @media all and (max-width: 420px){
+              font-size: 30px;
+              color: black;
+              font-weight: 400;              
+          }                        
+      }
+  }
+}
+
+.fourth_element:hover .supper{
+  display: block;
+}
+
+
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^fifth^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.fifth_element{
+  background: url('./images/img13.jpg');
+  background-position: center;
+  @include elements;
+  .deser{
+      @include pictures;     
+      .nav{
+          @include name;
+          @media all and (max-width: 420px){
+              font-size: 30px;
+              color: black;
+              font-weight: 400;              
+          }                        
+      }
+  }
+}
+
+.fifth_element:hover .deser{
+  display: block;
+  transition-duration: 4s;
+}
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^footer^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.footer_copyright{
+  color: white;
+  background-color: black;
+  letter-spacing: 0.7px;   
+  @media all and (max-width: 420px){
+      min-height: 100%;
+      min-width: 100%;
+      height: 15vw;  
+      font-size: 10px;            
+  }
+}
+
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^DRUGA SEKCJA^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.items_list_main{        
+    border: 3px double red;
+    background-color: rgb(56, 56, 56);
+    font-family: 'Montserrat', sans-serif;
+
+        .items_list{      
+            list-style-type: none;
+            display:flex;
+            justify-content: space-around; 
+            @media all and (max-width: 600px){
+                display: flex;
+                flex-wrap: wrap;
+            }           
+            .items{                             
+                padding: 20px;
+                margin: 10px;    
+                overflow: hidden;             
+                p{
+                    max-width: 100%;
+                    width: 180px;
+                    font-size: 15px;
+                    font-family: 'Montserrat', sans-serif;    
+                    text-align: center;
+                    color: white;
+                    padding-left: 15px;
+                    margin: 12px;
+                    @media all and (max-width: 600px){
+                       font-size: 12px;
+                    }
+                }  
+                img{
+                    max-width: 100%;
+                    width: 200px;
+                    height: 200px;
+                    transition-duration: 0.5s;
+                    margin: 0 auto;
+                    display: block;
+                    border: 7px solid black;
+                     &:hover {
+                        transform: scale(1.1);
+                        -webkit-transform: scale(1.1);
+                        -moz-transform: scale(1.1);
+                        z-index: 0;
+                    }
+                    
+                }     
+            }
+
+        }
+}
