@@ -61,7 +61,15 @@ import {db} from '../firebase'
       for(let i=0; i<a.length; i++) {//robimy pętle po typach (a)
         if ( (i+1)%3 === 0) {//wykonuj akcję dla i=2, 5, 8 ..(bo dla i=1 i i=0 nie spełniamy modulo)
           rows.push([a[i-2],a[i-1],a[i]]);//do rows wrzucamy tablicę kolumn, dla i=2: 2-2=0, 2-1=1, =2 => to są nasze kolumny itd
-        }        
+        }else if (i+1 === a.length) {
+            const rest = a.length - Math.floor(a.length / 3)*3;
+            const columns = [];
+            for (let j=0;j<rest;j++) {
+              columns.push(a[Math.floor(a.length / 3)*3+j]);
+            }
+            rows.push(columns);
+        }
+      
       }
 
       let disp;
@@ -78,6 +86,7 @@ import {db} from '../firebase'
         default:
           disp = null;
           break;
+          
       }
       //każdy wiersz składa się z 3 kolumn. Wierszy jest 3. Robimy dwa razy pętle. Raz dla wierszy i raz dla kolumn.
       return (
@@ -92,21 +101,6 @@ import {db} from '../firebase'
         </section>
       );      
     };
-
-  // <div class="items_list"> => genSection
-  //       <div class="items"> =>genItem
-  //            <img src="./img/img8.jpg" alt=""/>
-  //           <p>PUDDING RYŻOWY Z KARMELIZOWANĄ GRUSZKĄ</p>
-  //       </div>
-  //       <div class="items">
-  //             <img src="./img/img9.jpg" alt=""></>
-  //             <p>PUDDING RYŻOWY Z KARMELIZOWANĄ GRUSZKĄ</p>
-  //       </div>
-  //       <div class="items">
-  //             <img src="./img/img10.jpg" alt=""></>
-  //             <p>PUDDING RYŻOWY Z KARMELIZOWANĄ GRUSZKĄ</p>
-  //       </div>
-  // </div>
 
     render(){
 

@@ -15,6 +15,7 @@ class Header extends Component {
     handleClick = () => {
         this.setState({
             display: this.state.display === "none" ? "block" : "none"
+            
         })
     };   
     
