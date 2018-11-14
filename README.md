@@ -1,7 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Lilando
->A small website of a cosmetics company Lilando. Using sass and js.
+# Qlinarny Świat
 
 
 ## Table of contents
@@ -16,11 +15,11 @@ A small responsive website of page with culinary recipes.
 
 ## Screenshots
 main page:
-![Example screenshot](../img/print_1.png)
+![Example screenshot](./images/print_1.png)
 part of recipes:
-![Example screenshot](../img/print_2.png)
+![Example screenshot](./images/print_2.png)
 responsive view:
-![Example screenshot](../img/print_3.png)
+![Example screenshot](./images/print_3.png)
 
 ## Technologies
 * JavaScript - ECMAScript 6
