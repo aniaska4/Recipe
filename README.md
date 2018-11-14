@@ -15,11 +15,11 @@ A small responsive website of page with culinary recipes.
 
 ## Screenshots
 main page:
-![Example screenshot](.src/images/print_1.png)
+![Example screenshot](./src/images/print_1.png)
 part of recipes:
-![Example screenshot](.src/images/print_2.png)
+![Example screenshot](./src/images/print_2.png)
 responsive view:
-![Example screenshot](.src/images/print_3.png)
+![Example screenshot](./src/images/print_3.png)
 
 ## Technologies
 * JavaScript - ECMAScript 6
