@@ -15,7 +15,7 @@ A small responsive website of page with culinary recipes.
 
 ## Screenshots
 main page:
-![Example screenshot](..src/images/print_1.png)
+![Example screenshot](.src/images/print_1.png)
 part of recipes:
 ![Example screenshot](.src/images/print_2.png)
 responsive view:
